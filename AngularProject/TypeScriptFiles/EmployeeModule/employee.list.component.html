@@ -1,0 +1,14 @@
+<div>
+<input type="button" value="Show Add New" (click)="ShowAddNew()"/>
+<h1>Employee Information</h1>
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Sal</th>
+    </tr>
+    <!-- color is input property of mouseover directive-->
+    <tr *ngFor="let x of Employees" mouseovercolor='green'>
+        <td>{{x.EmpName  | lowercase | concat:'a':'b':x.Salary}}</td>
+        <td>{{x.Salary | currency}}</td>
+    </tr>
+</table>
